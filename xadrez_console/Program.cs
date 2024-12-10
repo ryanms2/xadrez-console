@@ -1,7 +1,17 @@
-﻿internal class Program
-{
-    private static void Main(string[] args)
+﻿
+using xadrez_console.tabuleiro;
+
+namespace xadrez_console {
+   internal class Program
     {
-        Console.WriteLine("Hello, World!");
-    }
+        private static void Main(string[] args)
+        {
+            Posicao P;
+            P = new Posicao(3, 4);
+
+            Console.WriteLine("Posição: " + P);
+
+            Console.ReadLine();
+        }
+    } 
 }
