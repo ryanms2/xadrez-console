@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="xadrez\Class1.cs" />
+  </ItemGroup>
+
 </Project>
