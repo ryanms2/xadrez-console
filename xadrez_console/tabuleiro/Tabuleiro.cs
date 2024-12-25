@@ -35,10 +35,23 @@ namespace xadrez_console.tabuleiro
         {
             if (existePeca(pos))
             {
-                throw new TabuleiroException("Já existe uma peça nessa posição!");
+                throw new TabuleiroException("Jï¿½ existe uma peï¿½a nessa posiï¿½ï¿½o!");
             }
             pecas[pos.linha, pos.coluna] = p;
             p.posicao = pos;
+        }
+
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (Peca(pos) == null)
+            {
+                return null;
+            }
+
+            Peca aux = Peca(pos);
+            aux.posicao = null;
+            pecas[pos.linha, pos.coluna] = null;
+            return aux;
         }
 
         public bool posicaoValida(Posicao pos)
@@ -54,7 +67,7 @@ namespace xadrez_console.tabuleiro
         {
             if (!posicaoValida(pos))
             {
-                throw new TabuleiroException("Posição inválida!");
+                throw new TabuleiroException("Posiï¿½ï¿½o invï¿½lida!");
             }
         }
     }
